@@ -294,9 +294,9 @@ public class Prog : NetworkBehaviour
         if (newHead != 0)
         {
             GameObject b = (GameObject)MonoBehaviour.Instantiate(this.bullet, transform.position, Quaternion.identity);
-            b.GetComponent<Fire>().localPlayer = GetComponent<NetworkIdentity>();
+            //b.GetComponent<Fire>().localPlayer = GetComponent<NetworkIdentity>();
             NetworkServer.SpawnWithClientAuthority(b, this.connectionToClient);
-            b.GetComponent<Fire>().newHeads = newHead;
+            //b.GetComponent<Fire>().newHeads = newHead;
             new WaitForSeconds(0.01f);
         }
     }

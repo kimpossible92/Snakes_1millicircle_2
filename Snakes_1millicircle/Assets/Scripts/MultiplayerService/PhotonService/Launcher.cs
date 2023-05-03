@@ -4,7 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using System;
-using MasterSystem;
+//using MasterSystem;
 
 namespace MultiplayerSystem
 {
@@ -66,7 +66,7 @@ namespace MultiplayerSystem
         {
             multiplayerService.JoinedRoomEvent();
             Debug.Log("[Launcher] JoinRoom Photon");
-            GameObject player = MasterClass.Instance.GetPlayerPrefab;
+            GameObject player = MClass.Instance.GetPlayerPrefab;
 
             if (playerCount > 0)
                 spawnPos = -spawnPos;

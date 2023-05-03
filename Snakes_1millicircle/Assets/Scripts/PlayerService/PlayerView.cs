@@ -54,6 +54,7 @@ namespace PlayerSystem
         void SpawnBullet()
         {
             GameObject bullet = PhotonNetwork.Instantiate(bulletPrefab.name, shotPos.transform.position, Quaternion.identity, 0);
+            bullet.gameObject.SetActive(true);
             bullet.GetComponent<BulletView>().Shoot(Vector3.right);
         }
 

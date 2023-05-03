@@ -14,7 +14,7 @@ namespace UISystem
         public event Action joinRoom;
         public event Action<string> logIn;
 
-        public UIService(UIView uiView)
+        public UIService(UIV uiView)
         {
             uiController = new UIController(uiView, this);
         }

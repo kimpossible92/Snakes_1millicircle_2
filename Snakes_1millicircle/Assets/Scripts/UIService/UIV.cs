@@ -8,7 +8,7 @@ using Commons;
 
 namespace UISystem
 {
-    public class UIView : Singleton<UIView>
+    public class UIV : Singleton<UIV>
     {
         public Text connectionStatus;
         [SerializeField] private InputField playerNameIF;
@@ -45,7 +45,7 @@ namespace UISystem
         {
             if (playerNameIF.text.Length > 3)
             {
-                Debug.Log("[UIView] LogIn Button Clicked");
+                Debug.Log("[UIV] LogIn Button Clicked");
                 PhotonNetwork.NickName = playerNameIF.text;
                 uiService.LogInEvent(PhotonNetwork.NickName);
             }
@@ -53,21 +53,21 @@ namespace UISystem
 
         void JoinRoomBtn()
         {
-            Debug.Log("[UIView] Join Room Button Clicked");
+            Debug.Log("[UIV] Join Room Button Clicked");
             uiService.JoinRoomEvent();
         }
 
         public void ConnectedToMaster()
         {
             ActivatePanel(logInPanel);
-            Debug.Log("[UIView] LogIn Panel");
+            Debug.Log("[UIV] LogIn Panel");
         }
 
         public void JoinedLobby(string playerNameVal)
         {
             playerName.text = playerNameVal;
             ActivatePanel(lobbyPanel);
-            Debug.Log("[UIView] JoinedLobby");
+            Debug.Log("[UIV] JoinedLobby");
         }
 
         public void JoinedRoom()
@@ -79,7 +79,7 @@ namespace UISystem
         public void Disconnected()
         {
             ActivatePanel(disconnectedPanel);
-            Debug.Log("[UIView] Disconnected");
+            Debug.Log("[UIV] Disconnected");
         }
 
     }

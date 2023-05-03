@@ -7,11 +7,11 @@ namespace UISystem
 {
     public class UIController
     {
-        private UIView uiView;
+        private UIV uiView;
         private IMultiplayer multiplayer;
         private UIService uiService;
 
-        public UIController(UIView uiView, UIService uiService)
+        public UIController(UIV uiView, UIService uiService)
         {
             this.uiService = uiService;
             this.uiView = uiView;

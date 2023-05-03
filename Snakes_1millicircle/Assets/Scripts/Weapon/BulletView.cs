@@ -19,12 +19,12 @@ namespace WeaponSystem
         public void Shoot(Vector2 dir)
         {
             myBody.AddForce(dir * force, ForceMode2D.Impulse);
-            Invoke("DestroyBullet", 1f);
+            Invoke("DestroyBullet", 2f);
         }
 
         void DestroyBullet()
         {
-            Destroy(gameObject); 
+            Destroy(gameObject);
         }
 
     }
