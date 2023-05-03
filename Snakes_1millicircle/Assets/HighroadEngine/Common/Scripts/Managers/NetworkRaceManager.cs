@@ -14,7 +14,7 @@ namespace MoreMountains.HighroadEngine
 	public class NetworkRaceManager : NetworkBehaviour
 	{
 		[Header("Race Manager")]
-		public RaceManager RaceManager;
+		public RacerM RaceManager;
 
 		[Header("Playing Options")]
 		[Information("By Default, we set the game with no collisions in network. This is because Unity Physics Engine is non-deterministic. This will cause interference between server and each client and provoques a bad experience for the players.\n", InformationAttribute.InformationType.Info, false)]
@@ -28,7 +28,7 @@ namespace MoreMountains.HighroadEngine
 		{
 			base.OnStartServer();
 
-			// Code from NetworkRaceManager is executed instead of RaceManager one
+			// Code from NetworkRaceManager is executed instead of RacerM one
 			RaceManager.OnDisableControlForPlayers = DisableControlForPlayers;
 			RaceManager.OnEnableControlForPlayers = EnableControlForPlayers;
 			RaceManager.OnUpdateCountdownText = UpdateCountdownText;
@@ -74,7 +74,7 @@ namespace MoreMountains.HighroadEngine
 		public virtual IEnumerator ManagerStart()
 		{
 			// Manager will not start until each player has changed scene and is ready to play
-			while (!OnlineLobbyManager.Instance.PlayersReadyToPlay)
+			while (!OnlineLobbyMst.Instance.PlayersReadyToPlay)
 			{
 				yield return null;
 			}
@@ -103,11 +103,11 @@ namespace MoreMountains.HighroadEngine
 		{
 			if (isServer)
 			{
-				OnlineLobbyManager.Instance.ReturnToLobby();
+				OnlineLobbyMst.Instance.ReturnToLobby();
 			}
 			else
 			{
-				OnlineLobbyManager.Instance.SendReturnToLobby();
+				OnlineLobbyMst.Instance.SendReturnToLobby();
 			}
 		}
 

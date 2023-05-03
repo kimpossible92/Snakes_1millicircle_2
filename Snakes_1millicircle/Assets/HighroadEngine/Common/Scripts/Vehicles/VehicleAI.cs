@@ -52,7 +52,7 @@ namespace MoreMountains.HighroadEngine
 		protected float _direction = 0f;
 		protected float _acceleration = 0f;
 		protected Vector3 _targetWaypoint;
-		protected RaceManager _raceManager;
+		protected RacerM _raceManager;
 
 		/// <summary>
 		/// Initialization
@@ -60,7 +60,7 @@ namespace MoreMountains.HighroadEngine
 		public virtual void Start() 
 		{
 			_controller = GetComponent<BaseController>();
-			_raceManager = FindObjectOfType<RaceManager>();
+			_raceManager = FindObjectOfType<RacerM>();
 
 			// we get the list of AI waypoint
 			if (_raceManager.AIWaypoints != null)

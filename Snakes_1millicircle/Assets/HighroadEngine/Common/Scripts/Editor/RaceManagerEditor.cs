@@ -9,7 +9,7 @@ namespace MoreMountains.HighroadEngine
 	/// This class adds order number and handles for each checkpoint on the scene view, for easier setup.
 	/// It also shows start positions.
 	/// </summary>
-	[CustomEditor(typeof(RaceManager))]
+	[CustomEditor(typeof(RacerM))]
 	[InitializeOnLoad]
 	public class RaceManagerEditor : Editor 
 	{		
@@ -19,7 +19,7 @@ namespace MoreMountains.HighroadEngine
 		public void OnSceneGUI()
 		{
 			Handles.color = Color.green;
-			RaceManager t = (target as RaceManager);
+			RacerM t = (target as RacerM);
 
 			if (t.Checkpoints != null)
 			{

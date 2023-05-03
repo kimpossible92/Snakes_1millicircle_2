@@ -23,7 +23,7 @@ namespace MoreMountains.HighroadEngine
 
 		protected Rigidbody _rigidbody;
 		protected Collider _collider;
-		protected RaceManager _raceManager;
+		protected RacerM _raceManager;
 		protected Transform[] _checkpoints;
 		protected int _currentWaypoint = 0;
 
@@ -123,7 +123,7 @@ namespace MoreMountains.HighroadEngine
 		{
 			// Init managers
 			_collider = GetComponent<Collider>();
-			_raceManager = FindObjectOfType<RaceManager>();
+			_raceManager = FindObjectOfType<RacerM>();
 			_rigidbody = GetComponent<Rigidbody>();
 
 			IsOnSpeedBoost = false;

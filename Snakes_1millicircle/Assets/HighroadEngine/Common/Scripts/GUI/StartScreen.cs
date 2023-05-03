@@ -47,7 +47,7 @@ namespace MoreMountains.HighroadEngine
 		protected virtual void RemoveBackgroundGame()
 		{
 			// We need to remove LocalLobby since it's a persistent object
-			Destroy(LocalLobbyManager.Instance.gameObject);
+			Destroy(LocalLobbyMst.Instance.gameObject);
 		}
 	}
 }
